@@ -1,0 +1,142 @@
+//========== Font Google ==========//
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+//========== :ROOT ==========//
+
+:root {
+  --body: #f1f1f1;
+  --white-: #ffffff;
+  --hc: #222831;
+  --span: #f90716;
+  --gray: #aaaaaa;
+
+  //====== Font And Typography ======//
+
+  --body-font: 'Oswald', sans-serif;
+  --h2-fs: 1.26rem;
+  --h3-fs: 1rem;
+  --normal-fs: 0.938rem;
+  --small-fs: 0.813rem;
+  --smaller-fs: 0.75rem;
+}
+
+//========== Responsive Typography ==========//
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h2-fs: 1.5rem;
+    --h3-fs: 1.25rem;
+    --normal-fs: 1rem;
+    --small-fs: 0.875rem;
+    --smaller-fs: 0.813rem;
+  }
+}
+
+//========== Body Dark ==========//
+
+body.dark-theme {
+  --body: #393e46;
+  --white: #222831;
+  --hc: #ffffff;
+  --span: #00d7ff;
+}
+
+//========== Base ==========//
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-fs);
+  background-color: var(--body);
+  color: var(--hc);
+  transition: all 0.3s linear;
+}
+
+html {
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 0.6rem;
+    border-radius: 0.5rem;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: var(--span);
+    &:hover {
+      background-color: var(--hc);
+    }
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: var(--hc);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+//========== Resauble SCSS ==========//
+
+.container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+//========== Butont ==========//
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background: var(--span);
+  color: var(--white-);
+  padding: 1.15rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 15px 10px -1px var(--gray);
+  -webkit-box-shadow: 0px 15px 10px -1px var(--gray);
+  -moz-box-shadow: 0px 15px 10px -1px var(--gray);
+  transition: 0.3s;
+  i {
+    font-size: 1.25rem;
+    color: var(--hc);
+  }
+  &:hover {
+    background-color: transparent;
+    color: var(--hc);
+    border: 1px solid var(--span);
+  }
+}
+.button__small {
+  padding: 0.75rem;
+  box-shadow: none;
+}
+
+.skills__box {
+  border: 10px double var(--span);
+  border-radius: 50px;
+  padding: 20px;
+}

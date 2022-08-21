@@ -1,0 +1,12 @@
+.change-theme {
+  position: fixed;
+  top: 1.5rem;
+  right: 15px;
+  font-size: 1.5rem;
+  color: var(--hc);
+  cursor: pointer;
+  transition: all 0.3s linear;
+  &:hover {
+    color: var(--span);
+  }
+}
